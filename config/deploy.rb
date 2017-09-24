@@ -28,7 +28,7 @@ set :rvm_ruby_version, '2.4.0'
 set :rvm_ruby_version, "ruby-2.4.0@#{fetch(:application)}"
 #set :rvm_custom_path, '/usr/share/rvm'  # only needed if not detected
 
-set :linked_files, fetch(:linked_files, []).push('config/database.yml','config/application.yml','config/puma.rb','config/secrets.yml')
+set :linked_files, fetch(:linked_files, []).push('config/database.yml','config/application.yml','puma.rb','config/secrets.yml')
 # append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'public/system'
 set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads')
 set :sidekiq_default_hooks, true
